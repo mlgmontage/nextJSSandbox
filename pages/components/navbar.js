@@ -5,13 +5,13 @@ export default () => {
   return (
     <div>
       <Link href="/">
-        <a>Home</a>
+        <a className="btn btn-warning">Home</a>
       </Link>
       <Link href="/About">
-        <a>About</a>
+        <a className="btn btn-primary">About</a>
       </Link>
       <Link href="/Contact">
-        <a>Contact</a>
+        <a className="btn btn-primary">Contact</a>
       </Link>
     </div>
   );

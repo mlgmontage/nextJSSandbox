@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import Layout from "./components/Layout";
 
 export default function Home() {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState({ first: 0, second: 0 });
 
   return (
     <Layout>
-      <h1>{counter}</h1>{" "}
+      <h1>
+        first: {counter.first}, second: {counter.second}
+      </h1>{" "}
       <button
+        className="btn btn-info"
         onClick={() => {
-          setCounter(counter + 1);
+          setCounter({ ...counter, first: counter.first + 1 });
         }}
       >
         +1
       </button>
       <button
+        className="btn btn-info"
         onClick={() => {
-          setCounter(counter - 1);
+          setCounter({ ...counter, second: counter.second + 1 });
         }}
       >
-        -1
+        +1
       </button>
     </Layout>
   );
